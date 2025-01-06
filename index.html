@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Check-In Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Check-In</h1>
+        <form id="checkinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfkQVvV8qG5zc0RGnX3MlLx49m30hQQl4ShWzFdPI8PapadbA/formResponse" method="post" target="_blank">
+            <div class="form-group">
+                <label for="name">Name (Full and Preferred):</label>
+                <input type="text" name="entry.778554323" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="entry.1054606276" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" name="entry.1000382314" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">Weekly Check-In:</label>
+                <textarea name="entry.535353614" id="checkin" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('checkinForm').onsubmit = function() {
+            alert('Your check-in has been submitted!');
+        };
+    </script>
+</body>
+</html>
+
+
