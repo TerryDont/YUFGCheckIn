@@ -1,74 +1,74 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta property="og:title" content="YUFGC Weekly Check-In">
+    <meta property="og:description" content="If you're not a member please fill out this sign up sheet before showing up to the meeting">
+    <meta property="og:image" content="YUFGC Logo Red.png">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--<script>
+    function day_of_week() {
+    var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var d = document.getElementById('date').valueAsDate;
+    var n = d.getUTCDay()
+    document.getElementById("output").innerHTML = weekday[n];
+    }
+
+    </script>-->
+        
     <title>Weekly Check-In Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+
 </head>
+
 <body>
     <div class="container">
         <h1>Weekly Check-In</h1>
-        <form id="checkinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfkQVvV8qG5zc0RGnX3MlLx49m30hQQl4ShWzFdPI8PapadbA/formResponse" method="post" target="_blank">
-            <div class="form-group">
-                <label for="name">Name (Full and Preferred):</label>
-                <input type="text" name="entry.778554323" id="name" required>
-            </div>
+        <form id="checkinForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfkQVvV8qG5zc0RGnX3MlLx49m30hQQl4ShWzFdPI8PapadbA/formResponse"
+            method="post" target="_blank">
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="entry.1054606276" id="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="date">Date:</label>
+            <div class="group">
+                <label for="date">Date of the meeting TESTTT:</label>
                 <input type="date" name="entry.1000382314" id="date" required>
             </div>
 
-            <div class="form-group">
-                <label for="checkin">Weekly Check-In:</label>
-                <textarea name="entry.535353614" id="checkin" rows="4" required></textarea>
+            <div class="group">
+                <label for="name">Name (Full and Preferred):</label>
+                <input type="text" name="entry.778554323" id="name" required="">
+            </div>
+
+            <div class="group">
+                <label for="yesno">Are you a York Student?</label><br>
+                <div class="horizontal-table">
+                    <input type="radio" id="Yes" name="entry.469447030" value="yes">
+                    <label for="Yes">Yes</label>
+                </div>
+                <div class="horizontal-table">
+                    <input type="radio" id="No" name="entry.469447030" value="No">
+                    <label for="No">No</label>
+                </div>
+            </div>
+
+            <div class="group">
+                <label for="DiscName">Discord Name:</label>
+                <input type="text" name="entry.1054606276" id="DiscName" required=""><br>
+            </div>
+
+            <div class="group">
+                <label for="info">Contact Info:</label>
+                <input type="text" name="entry.535353614" id="info" required=""><br>
             </div>
 
             <button type="submit">Submit</button>
@@ -76,11 +76,13 @@
     </div>
 
     <script>
-        document.getElementById('checkinForm').onsubmit = function() {
+        document.getElementById('checkinForm').onsubmit = function () {
             alert('Your check-in has been submitted!');
         };
     </script>
+
+
+
 </body>
+
 </html>
-
-
