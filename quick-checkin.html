@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e72d36">
+  <title>Express Check-In · YUFGC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkin-page">
+  <a class="skip-link" href="#quick-form">Skip to check-in form</a>
+  <header class="site-header compact-header"><a class="brand" href="home.html"><img src="YUFGC%20Logo%20Red.png" alt="YUFGC logo"><span>YUFGC <small>YorkU Fighting Game Community</small></span></a><nav aria-label="Primary navigation"><a href="home.html">Club home</a><a class="nav-current" href="index.html">Check in</a></nav></header>
+  <main class="alternative-main">
+    <section class="alternative-heading"><a class="back-link" href="index.html">← All check-in options</a><p class="eyebrow">Option 02 · Self-serve</p><h1>Express<br><em>check-in.</em></h1><p class="lede">For returning players who only need a quick “I’m here.” Great for a shared tablet at the door.</p></section>
+    <section class="alternative-layout">
+      <div class="form-card compact-form" id="quick-form">
+        <div class="form-card-heading"><div><p class="eyebrow">Fast lane</p><h2>Ready for another set?</h2></div><span class="timer-badge">~20 sec</span></div>
+        <form id="quickCheckinForm"><div class="form-grid"><div class="field"><label for="quick-name">Name <span aria-hidden="true">*</span></label><input id="quick-name" name="name" autocomplete="name" placeholder="What should we call you?" required></div><div class="field"><label for="quick-discord">Discord name <span aria-hidden="true">*</span></label><input id="quick-discord" name="discord" autocomplete="nickname" placeholder="playername" required></div></div><label class="checkbox-choice"><input type="checkbox" name="updates"><span>I’m happy to hear about future YUFGC sessions.</span></label><button class="button button-primary button-large" type="submit">I’m here <span aria-hidden="true">→</span></button></form>
+        <div class="success-message" id="quick-success" hidden tabindex="-1"><span class="success-mark" aria-hidden="true">✓</span><div><strong>Checked in — have fun!</strong><p>Your device saved a local timestamp for today.</p></div></div>
+      </div>
+      <aside class="mode-explainer"><span class="solution-number">How it works</span><h2>Minimal fields.<br>Maximum flow.</h2><p>This demo saves entries only in this browser. It is ideal for testing the flow; connect it to a shared spreadsheet or membership system before using it as the official attendance record.</p><div class="local-count"><span>Today on this device</span><strong id="quick-count">0</strong><small>express check-ins</small></div></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><p><strong>YUFGC</strong> · YorkU Fighting Game Community</p><a href="kiosk-checkin.html">Next: door kiosk →</a></footer>
+  <script src="checkin.js"></script>
+</body>
+</html>
