@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e72d36">
+  <meta property="og:title" content="YUFGC | Guest Check-In">
+  <meta property="og:description" content="Check in for YorkU Fighting Game Community's next session.">
+  <title>Guest Check-In · YUFGC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkin-page">
+  <a class="skip-link" href="#checkin-form">Skip to check-in form</a>
+  <header class="site-header compact-header">
+    <a class="brand" href="index.html" aria-label="YorkU Fighting Game Community home"><img src="YUFGC%20Logo%20Red.png" alt="YUFGC logo"><span>YUFGC <small>YorkU Fighting Game Community</small></span></a>
+    <nav aria-label="Primary navigation"><a href="index.html">Club home</a><a class="nav-current" href="guest-checkin.html">Check in</a></nav>
+  </header>
+  <main>
+    <section class="checkin-hero">
+      <div><p class="eyebrow">Weekly session · Guest check-in</p><h1>You’re on the <em>player list.</em></h1><p class="lede">New to YUFGC or dropping in for the night? Let us know you’re here. It takes about a minute.</p></div>
+      <aside class="session-note" aria-label="Check-in details"><span class="note-icon" aria-hidden="true">01</span><div><strong>Bring your controller</strong><span>and your favourite games. All skill levels welcome.</span></div></aside>
+    </section>
+    <section class="checkin-layout" aria-label="Guest check-in">
+      <div class="stepper" aria-label="Check-in steps"><div class="step active"><span>1</span><b>Your details</b></div><div class="step"><span>2</span><b>See you there</b></div></div>
+      <div class="form-card" id="checkin-form">
+        <div class="form-card-heading"><div><p class="eyebrow">Guest form</p><h2>Let’s get you checked in.</h2></div><span class="required-key"><i></i> Required</span></div>
+        <form id="checkinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdu2UmJ48q1kKL07vF1g8dJQ_0yJm84BANTj3J7UPTSXP4OUQ/formResponse" method="post" target="submission-frame">
+          <div class="form-grid">
+            <div class="field field-wide"><label for="date">Session date <span aria-hidden="true">*</span></label><input type="date" name="entry.981729855" id="date" required></div>
+            <div class="field field-wide"><label for="name">Your name <span aria-hidden="true">*</span></label><input type="text" name="entry.2094344317" id="name" autocomplete="name" placeholder="Full name and preferred name" required></div>
+            <fieldset class="field field-wide"><legend>Are you a York student? <span aria-hidden="true">*</span></legend><div class="choice-row"><label class="choice"><input type="radio" name="entry.1199929865" value="Yes" required><span>Yes</span></label><label class="choice"><input type="radio" name="entry.1199929865" value="No"><span>Not currently</span></label></div></fieldset>
+            <div class="field"><label for="DiscName">Discord name <span aria-hidden="true">*</span></label><input type="text" name="entry.190013640" id="DiscName" autocomplete="nickname" placeholder="e.g. playername" required></div>
+            <div class="field"><label for="info">Email or phone <span aria-hidden="true">*</span></label><input type="text" name="entry.2040928741" id="info" autocomplete="email" placeholder="How we can reach you" required></div>
+          </div>
+          <p class="form-privacy">Your details are sent to the YUFGC organizers through the club’s Google Form.</p><button class="button button-primary button-large" type="submit">Check in <span aria-hidden="true">→</span></button>
+        </form>
+        <iframe class="submission-frame" name="submission-frame" title="Google Form submission"></iframe>
+        <div class="success-message" id="submission-success" hidden tabindex="-1"><span class="success-mark" aria-hidden="true">✓</span><div><strong>You’re checked in!</strong><p>Thanks — we’ll see you at the session.</p></div></div>
+      </div>
+    </section>
+    <section class="alternatives" aria-labelledby="other-checkins-title">
+      <div class="section-heading"><div><p class="eyebrow">Explore the options</p><h2 id="other-checkins-title">Other ways to run check-in</h2></div><p>These working alternatives make it easy to test a faster or staff-led flow before choosing a permanent setup.</p></div>
+      <div class="solution-grid"><article class="solution-card selected"><span class="solution-number">01</span><h3>Guest form</h3><p>Best for collecting complete guest info. Sends entries directly to the existing Google Form.</p><span class="solution-status">You’re here</span></article><a class="solution-card" href="quick-checkin.html"><span class="solution-number">02</span><h3>Express check-in</h3><p>Fast, returning-player flow for a self-serve club tablet or phone.</p><span class="card-link">Try express <b>→</b></span></a><a class="solution-card" href="kiosk-checkin.html"><span class="solution-number">03</span><h3>Door kiosk</h3><p>Staff-assisted roster mode with an end-of-night CSV export.</p><span class="card-link">Open kiosk <b>→</b></span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p><strong>YUFGC</strong> · YorkU Fighting Game Community</p><a href="index.html">Back to club home ↑</a></footer>
+  <script src="checkin.js"></script>
+</body>
+</html>
